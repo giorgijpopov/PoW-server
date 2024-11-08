@@ -1,0 +1,8 @@
+# Dockerfile-server
+FROM golang:1.23.2
+
+WORKDIR /app
+COPY server/ .
+
+RUN go build -o serv
+CMD ["./serv"]
